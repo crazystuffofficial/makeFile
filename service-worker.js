@@ -15,4 +15,5 @@ function makeFile(name, contentype, content){
   }
   `);
 }
+  makeFile("/makeFile/test.html", "text/html", "PGh0bWw+CjxoZWFkPgo8L2hlYWQ+Cjxib2R5Pgo8aDE+WUVFRTwvaDE+CjwvYm9keT4KPC9odG1sPg==");
 });
