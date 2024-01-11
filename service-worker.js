@@ -1,6 +1,6 @@
 self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url);
-function makeFile(name, contentype, content){
+function makeFile(name, contenttype, content){
   eval(`
   if (url.pathname === '` + name + `') {
     event.respondWith(
