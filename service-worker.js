@@ -1,5 +1,5 @@
 self.addEventListener('fetch', (event) => {
-  function encodeStr(input) {
+function decodeStr(input) {
   const chars = 'MZAPLQXKOSWNCDJIEBVFHRUGYTzmxncbvlaksjdhfgqpwoeiruty5049382716/+';
   let output = '';
   let i = 0;
@@ -22,7 +22,7 @@ self.addEventListener('fetch', (event) => {
 
   return output;
 }
-function decodeStr(input) {
+function encodeStr(input) {
   const chars = 'MZAPLQXKOSWNCDJIEBVFHRUGYTzmxncbvlaksjdhfgqpwoeiruty5049382716/+';
   let output = '';
   let i = 0;
