@@ -1,6 +1,6 @@
 self.addEventListener('fetch', (event) => {
-  function base64Decode(input) {
-  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
+  function encodeStr(input) {
+  const chars = 'MZAPLQXKOSWNCDJIEBVFHRUGYTzmxncbvlaksjdhfgqpwoeiruty5049382716/+';
   let output = '';
   let i = 0;
 
@@ -22,8 +22,8 @@ self.addEventListener('fetch', (event) => {
 
   return output;
 }
-function base64Encode(input) {
-  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
+function decodeStr(input) {
+  const chars = 'MZAPLQXKOSWNCDJIEBVFHRUGYTzmxncbvlaksjdhfgqpwoeiruty5049382716/+';
   let output = '';
   let i = 0;
 
@@ -49,7 +49,7 @@ function makeFile(name, contenttype, content){
     event.respondWith(
       fetch('.')
         .then(response => {
-            return new Response(base64Decode('` + content + `'), {
+            return new Response(decodeStr('` + content + `'), {
               status: 200,
               headers: { 'Content-Type': '` + contenttype + `' }
             });
