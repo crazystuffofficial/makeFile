@@ -4,7 +4,7 @@ function makeFile(name, contenttype, content){
   eval(`
   if (url.pathname === '` + name + `') {
     event.respondWith(
-      fetch('text.txt')
+      fetch('.')
         .then(response => {
             return new Response(atob('` + content + `'), {
               status: 200,
